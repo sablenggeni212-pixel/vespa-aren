@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kopdar Komunitas Vespa – Ikatan Scooter Aren</title>
+  <meta name="description" content="Undangan digital Kopdar Vespa – Ikatan Scooter Aren. Ajak teman komunitas untuk riding santai dan silaturahmi!" />
+  <meta property="og:title" content="Kopdar Komunitas Vespa – Ikatan Scooter Aren" />
+  <meta property="og:description" content="Undangan digital Kopdar Vespa. Riding santai, foto-foto, dan silaturahmi antar scooterist." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="banner-vespa.jpg" />
+  <meta name="theme-color" content="#12664f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#12664f; /* retro british racing green */
+      --cream:#fff6e6;
+      --orange:#ff7a00;
+      --red:#d93b3b;
+      --ink:#1c1c1c;
+      --shadow: 0 10px 30px rgba(0,0,0,.12);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--cream);color:var(--ink);font-family:Poppins,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;}
+    a{color:var(--green);text-decoration:none}
+    img{max-width:100%;display:block}
+    /* Navbar */
+    .nav{position:sticky;top:0;z-index:40;background:rgba(255,246,230,.8);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(0,0,0,.06)}
+    .container{max-width:1100px;margin:auto;padding:0 20px}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.5px}
+    .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid var(--green)}
+    .nav-links{display:flex;gap:18px}
+    .nav a{padding:8px 12px;border-radius:10px}
+    .nav a:hover{background:#ffffff94}
+    /* Hero */
+    .hero{position:relative;min-height:62vh;display:grid;place-items:center;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg, var(--green), #0b8f6b);z-index:-2}
+    .hero::after{content:"";position:absolute;inset:0;background:url('banner-vespa.jpg') center/cover no-repeat;opacity:.25;mix-blend:multiply;z-index:-1}
+    .hero-card{background:rgba(255,255,255,.92);border-radius:24px;box-shadow:var(--shadow);padding:28px;max-width:860px;margin:30px 20px;display:grid;gap:12px}
+    .hero-badge{display:inline-flex;gap:8px;align-items:center;background:var(--ink);color:#fff;border-radius:999px;padding:6px 12px;font-weight:600;font-size:14px;width:max-content}
+    .title{font-family:Montserrat, Poppins, sans-serif;font-weight:800;font-size:clamp(28px, 5vw, 46px);line-height:1.1;margin:8px 0;color:var(--ink)}
+    .subtitle{font-size:clamp(16px, 2.5vw, 18px);opacity:.8;margin-bottom:6px}
+    .meta{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0}
+    .chip{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:999px;padding:8px 12px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;gap:10px;border:none;border-radius:14px;padding:12px 16px;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-primary{background:var(--orange);color:#fff}
+    .btn-outline{background:#fff;color:var(--ink);border:1px solid rgba(0,0,0,.08)}
+    .btn:hover{transform:translateY(-1px)}
+
+    /* Sections */
+    section{padding:64px 0}
+    .card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+    .grid{display:grid;gap:20px}
+    @media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
+
+    h2{font-family:Montserrat, Poppins, sans-serif;font-weight:800;margin:0 0 12px}
+    .muted{opacity:.8}
+
+    /* Timeline */
+    .timeline{position:relative;padding-left:24px}
+    .timeline::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:rgba(0,0,0,.1)}
+    .t-item{position:relative;margin:12px 0}
+    .t-item::before{content:"";position:absolute;left:-1px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px #eaf5f1}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media(min-width:860px){.gallery{grid-template-columns:repeat(4,1fr)}}
+    .gal-item{border-radius:14px;overflow:hidden;aspect-ratio:4/3}
+
+    /* Map */
+    .map{border:0;width:100%;height:380px;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    /* Footer */
+    footer{padding:26px 0;background:#0f583f;color:#fff;text-align:center}
+    .social a{color:#fff;opacity:.9}
+
+    /* Utility */
+    .countdown{font-family:Montserrat, Poppins, sans-serif;font-weight:800;font-size:clamp(22px,4vw,28px)}
+    .badges{display:flex;gap:10px;flex-wrap:wrap}
+    .qr{width:130px;border-radius:12px;border:1px solid rgba(0,0,0,.1);box-shadow:var(--shadow)}
+  </style>
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <!-- Ganti src logo-komunitas.png dengan logo komunitas Anda -->
+        <img src="logo-komunitas.png" alt="Logo Komunitas" />
+        <span>Ikatan Scooter Aren</span>
+      </div>
+      <div class="nav-links">
+        <a href="#detail">Detail</a>
+        <a href="#rundown">Rundown</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#lokasi">Lokasi</a>
+        <a href="#rsvp">RSVP</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-card">
+      <span class="hero-badge">🛵 Kopdar Komunitas Vespa</span>
+      <h1 class="title">Kopdar Vespa 2025</h1>
+      <p class="subtitle">Silaturahmi • Riding Santai • Foto Bareng</p>
+
+      <div class="meta">
+        <span class="chip">📅 <strong id="tanggal">Minggu, 25 Agustus 2025</strong></span>
+        <span class="chip">⏰ <strong>08.00 WIB – selesai</strong></span>
+        <span class="chip">📍 <strong>Alun-Alun Kota Tangerang</strong></span>
+      </div>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="#rsvp">Konfirmasi Kehadiran</a>
+        <a class="btn btn-outline" href="#lokasi">Lihat Lokasi</a>
+        <button class="btn btn-outline" id="btn-share" type="button">Bagikan Undangan</button>
+      </div>
+
+      <div class="meta" style="align-items:center;justify-content:space-between;gap:20px">
+        <div class="badges">
+          <span class="chip">🧥 Dress code: Vespa Spirit</span>
+          <span class="chip">📸 Dokumentasi bareng</span>
+          <span class="chip">☕ Ngopi santai</span>
+        </div>
+        <!-- Ganti qr-maps.png dengan QR menuju link Google Maps -->
+        <img class="qr" src="qr-maps.png" alt="QR ke Google Maps" />
+      </div>
+
+      <p class="countdown" id="countdown">Hitung mundur dimulai…</p>
+    </div>
+  </header>
+
+  <!-- ===== DETAIL ===== -->
+  <section id="detail">
+    <div class="container grid grid-2">
+      <div class="card">
+        <h2>Deskripsi Acara</h2>
+        <p class="muted">Kita kumpul bareng seluruh scooterist untuk riding santai, ngobrol komunitas, dan mempererat persaudaraan. Bawa semangat, perlengkapan berkendara yang aman, dan jangan lupa senyum terbaikmu. 🙌</p>
+        <div class="badges" style="margin-top:10px">
+          <span class="chip">🏁 Start: Alun-Alun</span>
+          <span class="chip">🛣️ Rute: City ride</span>
+          <span class="chip">🎁 Doorprize</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Kontak Panitia</h2>
+        <p>📞 Andi – 0812-0000-0000<br>📞 Sari – 0857-0000-0000</p>
+        <p>📷 Instagram: <a href="https://instagram.com/ikatan_scooter_aren" target="_blank" rel="noopener">@ikatan_scooter_aren</a></p>
+        <a class="btn btn-primary" href="https://wa.me/6281200000000?text=Halo%20panitia%2C%20saya%20konfirmasi%20hadir%20untuk%20Kopdar%20Vespa%202025" target="_blank" rel="noopener">Chat WhatsApp Panitia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RUNDOWN / TIMELINE ===== -->
+  <section id="rundown">
+    <div class="container card">
+      <h2>Rundown Acara</h2>
+      <div class="timeline">
+        <div class="t-item"><strong>07.30</strong> – Registrasi & kumpul</div>
+        <div class="t-item"><strong>08.00</strong> – Pembukaan & briefing</div>
+        <div class="t-item"><strong>08.15</strong> – Rolling city ride</div>
+        <div class="t-item"><strong>10.00</strong> – Rehat & ngopi</div>
+        <div class="t-item"><strong>10.30</strong> – Games & doorprize</div>
+        <div class="t-item"><strong>11.30</strong> – Foto bersama & penutupan</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERI ===== -->
+  <section id="galeri">
+    <div class="container">
+      <div class="card">
+        <h2>Galeri</h2>
+        <p class="muted">Dokumentasi kopdar sebelumnya.</p>
+        <div class="gallery" style="margin-top:12px">
+          <!-- Ganti placeholder gambar berikut dengan foto kegiatan -->
+          <div class="gal-item"><img src="galeri-1.jpg" alt="Vespa 1"></div>
+          <div class="gal-item"><img src="galeri-2.jpg" alt="Vespa 2"></div>
+          <div class="gal-item"><img src="galeri-3.jpg" alt="Vespa 3"></div>
+          <div class="gal-item"><img src="galeri-4.jpg" alt="Vespa 4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP / LOKASI ===== -->
+  <section id="lokasi">
+    <div class="container grid grid-2">
+      <div class="card">
+        <h2>Lokasi Kumpul</h2>
+        <p class="muted">Alun-Alun Kota Tangerang – klik tombol di bawah untuk rute tercepat.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://www.google.com/maps/place/Alun+Alun+Kota+Tangerang" target="_blank" rel="noopener">Buka di Google Maps</a>
+          <a class="btn btn-outline" href="#" id="btn-copy" data-copy="https://www.google.com/maps/place/Alun+Alun+Kota+Tangerang">Salin Link Lokasi</a>
+        </div>
+      </div>
+      <div class="card">
+        <!-- Ganti src/params iframe ini sesuai titik kumpul -->
+        <iframe class="map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.305220723163!2d106.635!3d-6.224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4200b1c9f7b79d%3A0x4f7d1b85f4d0c9c!2sAlun%20Alun%20Kota%20Tangerang!5e0!3m2!1sid!2sid!4v1680000000000"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RSVP ===== -->
+  <section id="rsvp">
+    <div class="container card">
+      <h2>Konfirmasi Kehadiran</h2>
+      <p class="muted">Klik tombol di bawah untuk konfirmasi via WhatsApp atau isi nama panggilanmu.</p>
+      <div class="cta">
+        <a class="btn btn-primary" id="waRSVP" href="https://wa.me/6281200000000?text=Halo%2C%20saya%20akan%20hadir%20di%20Kopdar%20Vespa%2025%20Agustus%202025" target="_blank" rel="noopener">Konfirmasi via WhatsApp</a>
+        <a class="btn btn-outline" href="#" id="btn-addcal">Tambah ke Kalender</a>
+      </div>
+      <form id="form-rsvp" style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+        <input id="nama" aria-label="Nama panggilan" placeholder="Nama panggilan" style="flex:1;min-width:220px;padding:12px 14px;border-radius:12px;border:1px solid rgba(0,0,0,.15)">
+        <button class="btn btn-outline" type="submit">Buat Pesan WA</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>© 2025 Ikatan Scooter Aren • Made with ❤️ untuk komunitas</div>
+      <div class="social" style="margin-top:8px">
+        <a href="#" aria-label="Instagram">Instagram</a> ·
+        <a href="#" aria-label="TikTok">TikTok</a> ·
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== Countdown ke tanggal acara =====
+    const acaraDate = new Date('2025-08-25T01:00:00+07:00'); // 08.00 WIB ~ GMT+7
+    const elCountdown = document.getElementById('countdown');
+    function renderCountdown(){
+      const now = new Date();
+      const diff = acaraDate - now;
+      if(diff <= 0){ elCountdown.textContent = 'Acara sedang berlangsung 🎉'; return; }
+      const d = Math.floor(diff / (1000*60*60*24));
+      const h = Math.floor((diff / (1000*60*60)) % 24);
+      const m = Math.floor((diff / (1000*60)) % 60);
+      elCountdown.textContent = `${d} hari ${h} jam ${m} menit lagi`;
+    }
+    renderCountdown();
+    setInterval(renderCountdown, 30000);
+
+    // ===== Web Share API =====
+    const share = document.getElementById('btn-share');
+    share?.addEventListener('click', async () => {
+      const data = { title: 'Kopdar Vespa 2025', text: 'Yuk gabung kopdar Vespa di Alun-Alun Tangerang!', url: location.href };
+      if (navigator.share) { try { await navigator.share(data); } catch(e){} }
+      else { navigator.clipboard.writeText(data.url); share.textContent='Link disalin!'; setTimeout(()=>share.textContent='Bagikan Undangan',1800); }
+    });
+
+    // ===== Copy maps link =====
+    document.getElementById('btn-copy')?.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const link = e.currentTarget.getAttribute('data-copy');
+      navigator.clipboard.writeText(link);
+      e.currentTarget.textContent = 'Link lokasi disalin ✓';
+      setTimeout(()=> e.currentTarget.textContent = 'Salin Link Lokasi', 1600);
+    });
+
+    // ===== RSVP form -> buat pesan WA =====
+    const form = document.getElementById('form-rsvp');
+    form?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const nama = document.getElementById('nama').value.trim() || 'Scooterist';
+      const text = encodeURIComponent(`Halo panitia, saya ${nama} akan hadir di Kopdar Vespa 25 Agustus 2025.`);
+      window.open(`https://wa.me/6281200000000?text=${text}`, '_blank');
+    });
+
+    // ===== Tambah ke Kalender (file .ics sederhana) =====
+    document.getElementById('btn-addcal')?.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const ics = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//ISA//Kopdar Vespa//ID\nBEGIN:VEVENT\nUID:${Date.now()}@isa\nDTSTAMP:${toICS(new Date())}\nDTSTART:${toICS(new Date('2025-08-25T01:00:00+07:00'))}\nDTEND:${toICS(new Date('2025-08-25T04:00:00+07:00'))}\nSUMMARY:Kopdar Vespa 2025\nLOCATION:Alun-Alun Kota Tangerang\nDESCRIPTION:Kopdar Vespa – Riding santai dan silaturahmi.\nEND:VEVENT\nEND:VCALENDAR`;
+      const blob = new Blob([ics], {type:'text/calendar'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'kopdar-vespa.ics'; a.click();
+      setTimeout(()=>URL.revokeObjectURL(url), 1000);
+    });
+
+    function toICS(d){
+      const pad = (n)=> String(n).padStart(2,'0');
+      const yyyy = d.getUTCFullYear();
+      const mm = pad(d.getUTCMonth()+1);
+      const dd = pad(d.getUTCDate());
+      const HH = pad(d.getUTCHours());
+      const MM = pad(d.getUTCMinutes());
+      const SS = pad(d.getUTCSeconds());
+      return `${yyyy}${mm}${dd}T${HH}${MM}${SS}Z`;
+    }
+  </script>
+</body>
+</html>
